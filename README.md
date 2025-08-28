@@ -1,11 +1,48 @@
-ESP-IDF template app
-====================
+ESP32 SPI TFT Display Project
 
-This is a template application to be used with [Espressif IoT Development Framework](https://github.com/espressif/esp-idf).
+This project demonstrates interfacing an ESP32 (ESP32-WROOM) with an SPI-based TFT display (ILI9341 driver) using ESP-IDF.
 
-Please check [ESP-IDF docs](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for getting started instructions.
+Currently, the firmware displays a "Hello" image on the TFT screen. Upcoming enhancements include receiving commands from an external module (via UART/SPI/BLE – depending on integration) and dynamically updating the TFT display based on those commands.
 
-*Code in this repository is in the Public Domain (or CC0 licensed, at your option.)
-Unless required by applicable law or agreed to in writing, this
-software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied.*
+Features
+
+ESP32-WROOM microcontroller
+
+TFT Display (ILI9341 controller, SPI interface)
+
+Display initialization and test image ("Hello")
+
+Modular code structure for future expansion
+
+Planned Features
+
+Receive commands from external module
+
+Parse and update display content dynamically
+
+Extendable for UI development (e.g., LVGL integration)
+
+## Preview 
+
+Current output on TFT display:
+  
+![Hello image on TFT](images/hello_display.jpg)
+
+Getting Started
+
+Install ESP-IDF
+.
+
+Clone this repository:
+
+git clone https://github.com/yourusername/yourrepo.git
+
+
+Build and flash:
+
+idf.py build flash monitor
+
+License
+
+This project is released under the CC0 / Public Domain License
+.
